@@ -1,0 +1,126 @@
+
+Hello Tami, our final project in MongoDB is our final project
+for the practical software engineer Database.
+
+We are creating a smart irrigation system for home use,
+so our Database is not the biggest.
+That being said it was crucial that our database would be
+well orginaized and properly conducted.
+
+Beacuse the base of our final database is the "samples" collection,
+where each document is a sample from our sensors, we needed to mimic
+samples as close to "real life" as possible. 
+So we decided to create a Python programme, which takes into account
+all the diffrent variables of "true" sample (time of the day, 
+peiod of the year, seasons, location and so on), and upload it
+the database in the appropriate collection. 
+
+We added the code for the programme just in case you wanted to examine it,
+of course we also added the JSON code for addition of the "samples"
+collesctions to this folder in case you dont mind the python programme.
+Take into account the the programme randomly generates samples according
+to our guidlines. 
+
+**IF SAMPLES DOESN'T COPIED PROPRLY YOU WILL NEED TO ACTIVATE THE
+**PYTHON PROGRAM FOR IT TO INSERT THE DATA! 
+
+Please note that the data in activation_reason collection and handle_expection collection
+Are in the same respective order.
+
+
+We are also adding an introduction for each collection,
+for your convenience.  
+
+
+-----Example for sample document from samples collection:-----
+{
+        "_id" : ObjectId("62de7a89620fc6798b0f53c8"),
+        "id" : int number,
+        "datetime_of_sample" : ISODate object,
+        "light_sensor_data" : float number,
+        "first_moist_sensor" : float number,
+        "second_moist_sensor" : float number,
+        "third_moist_sensor" : float number,
+        "first_atmosphere_sensor_data" : float number,
+        "second_atmosphere_sensor_data" : float number,
+        "is_raining" : boolean. data calculated by temperature sensor data & atmosphere sensors data
+        "temperature_sensor_data" : float number
+}
+
+
+-----Example for activation_history document:-----
+{
+        "_id" : ObjectId("62de7a89620fc6798b0f7601"),
+        "id" : int number,
+        "datime_of_activation" : ISODate object,
+        "activation_reason" : String,
+        "handle_code" : array of booleans the size of 4. with data for each transmission whether to activate
+}
+
+
+-----Example for activation_reason document:-----
+{ "_id" : "1", "msg" : "Everthing Is Under Control" }
+
+
+
+
+
+-----Example for handle_excpection document:-----
+*** code is the data that is being sent to the transmissions to start/stop
+{ "_id" : "1", "code" : [ false, false, false, false ] }
+
+
+
+
+-----Example for ex_counters document:-----
+{ "_id" : "No Light", "value" : 2366 }
+
+
+
+
+-----Example for ex_counters document:-----
+{
+        "_id" : ObjectId("62e78e0448f854a0562625c7"),
+        "id" : 0,
+        "datetime_of_sample" : ISODate("2021-01-01T00:00:00Z"),
+        "temperature_sensor_data" : 7.2220540046691895,
+        "light_sensor_data" : 303.3699951171875,
+        "atmosphere_sensors_data" : 1011.9618530273438,
+        "moist_sensors_data" : 59.15953572591146,
+        "is_raining" : false
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
