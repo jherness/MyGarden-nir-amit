@@ -1,0 +1,44 @@
+
+
+use MongoFinal
+
+db.activation_reason.drop()
+db.createCollection("activation_reason")
+
+db.activation_reason.insertMany([
+  {
+    '1': 'Everthing Is Under Control'  },
+  {
+    '2': 'Houston We Have A Problem'  },
+  {
+    '3': 'Dry Surface , Low Pressure And Hot Temperature '  },
+  {
+    '4': 'No Light , Low Pressure And Hot Temperature'  },
+  {
+    '5': 'No Light , Dry Surface And Hot Temperature'  },
+  {
+    '6': 'No Light , Dry Surface And Low Pressure'  },
+  {
+    '7': 'No Light And Hot Temperature'  },
+  { '8': 'No Light', _id: ObjectId("62d4ff82f3184f89155122a6") },
+  {
+    '9': 'No Light And Low Pressure'  },
+  {
+    '10': 'No Light And Dry Surface'  },
+  {
+    '11': 'Low Pressure And Hot Temperature'  },
+  {
+    '12': 'Dry Surface And Hot Outside'  },
+  {
+    '13': 'Dry Surface And Low Pressure'  },
+  {
+    '14': 'Hot Temperature'  },
+  { '15': 'Low Pressure' },
+  { '16': 'Dry Surface' },
+  {
+    '17': 'Scheduled Activition'
+  },
+  {
+    '18': 'Manual Activition'
+  }
+])
