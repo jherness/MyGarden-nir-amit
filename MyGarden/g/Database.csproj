@@ -157,6 +157,7 @@
     <Compile Include="Classes\ActivationHistory.cs" />
     <Compile Include="Classes\ActivationReason.cs" />
     <Compile Include="Classes\ExceptionCounter.cs" />
+    <Compile Include="Classes\User.cs" />
     <Compile Include="DBService.cs" />
     <Compile Include="Classes\DBSettings.cs" />
     <Compile Include="Classes\HandleException.cs" />

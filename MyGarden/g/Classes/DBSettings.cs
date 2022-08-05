@@ -31,5 +31,8 @@ namespace Database
         protected static IMongoCollection<ExceptionCounter> excepCountersCollection =
             db.GetCollection<ExceptionCounter>("ex_counters");
 
+        protected static IMongoCollection<User> usersCollection =
+            db.GetCollection<User>("users");
+
     }
 }

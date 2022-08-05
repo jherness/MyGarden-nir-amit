@@ -260,6 +260,7 @@
     <Compile Include="Controllers\HandleExceptionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SamplesController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -336,6 +337,7 @@
     <Folder Include="Views\ExceptionsCounters\" />
     <Folder Include="Views\Exceptions\" />
     <Folder Include="Views\RawSamples\" />
+    <Folder Include="Views\Users\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

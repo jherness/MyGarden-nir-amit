@@ -21,9 +21,20 @@ namespace Server
         {
             return DBService.GetAvgSamplesCollectionAsync();
         }
+
+        public static bool IsRegistered(User user)
+        {
+            return DBService.IsRegistered(user);
+        }
+
         static public Task<List<HandleException>> GetHandleExceptionCollection()
         {
             return DBService.GetHandleExcCollectionAsync();
+        }
+
+        public static Task<Sample> InsertNewSample(Sample newSample)
+        {
+            return DBService.InsertNewSample(newSample);
         }
 
         public static Task<ExceptionCounter> GetMostCommenException()
@@ -43,5 +54,23 @@ namespace Server
         {
             return DBService.GetExcCounCollectionAsync();
         }
+        static public Task<Sample> GetLatestSample()
+        {
+            return DBService.GetLatestSampleAsync();
+        }
+        static public Task<AvgSample> GetLatestAvgSample()
+        {
+            return DBService.GetLatestAvgSampleAsync();
+        }
+        static public List<AvgSample> GetRaining()
+        {
+            return DBService.GetRainingAsync();
+        }
+
+        static public User UpdateUserPass(User userToUpdate, string newPassword)
+        {
+            return DBService.ChangeUserPassword(userToUpdate, newPassword);
+        }
+
     }
 }
