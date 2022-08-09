@@ -5,7 +5,7 @@ import pandas as pd
 import GenerateSamples
 import pymongo
 """
-Hello Anitta, before running the program please make sure to generate 
+Hello Nir and Amit, before running the program please make sure to generate 
 activationReasonCollection and HandleException in mongoDB.
 Both of these collections are found in this project folder and are necessary 
 because we are preforming GET operation from mongo. And don't forget to change the mongo client address
@@ -55,16 +55,6 @@ def main():
         convert_collection_to_html(samples_collection, "Samples")  # Generating an .html file in the folder of
         # this proj, the html file consists of a table that is a direct mirror to the collection that is sent as
         # parameter.
-        convert_collection_to_html(activation_history_collection, "Activation History")
-        #convert_collection_to_csv(samples_collection, "all samples")  # Generating an .csv file in the folder of
-        # this proj, the csv file consists of a table that is a direct mirror to the collection that is sent as
-        # parameter.
-        #convert_collection_to_html(activation_history_collection, "activation_history")  # Generating an .html file in
-        # the folder of this proj, the html file consists of a table that is a direct mirror to the collection
-        # that is sent as parameter.
-        #convert_collection_to_csv(activation_history_collection, "activation_history")  # Generating an .csv file
-        # in the folder of this proj, the csv file consists of a table that is a direct mirror to the collection
-        # that is sent as parameter.
 
 
 

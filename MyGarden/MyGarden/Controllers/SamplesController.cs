@@ -12,7 +12,6 @@ using System.Net;
 
 namespace MyGarden.Controllers
 {
-    [RoutePrefix("api/Samples")]
     public class SamplesController : ApiController
     {
         [HttpGet]
