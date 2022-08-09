@@ -35,7 +35,7 @@ namespace MyGarden.Controllers
         }
 
         [HttpPut]
-        [Route("UpdateUserPassword")]
+        [Route("api/Users/UpdateUserPassword")]
         public IHttpActionResult UpdateUserPassword([FromBody] User userToUpdate, string newPassword)
         {
             try

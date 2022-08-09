@@ -52,6 +52,31 @@ namespace Database
                 throw new Exception(ex.Message);
             }
         }
+        public static async Task<List<Relays>> GetRelays()
+        {
+            try
+            {
+                return await relays.Find(new BsonDocument()).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public static async Task<Relays> ActivateRelay(Relays rl)
+        {
+            try { 
+            await relays.InsertOneAsync(rl);
+            var rls = await GetRelays();
+            rls.Sort((a, b) => a._id.CompareTo(b._id));
+                return rls.ElementAt(rls.Count-1);
+        }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+    }
+}
 
         public static async Task<List<ActivationReason>> GetActReasCollectionAsync()
         {

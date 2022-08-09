@@ -1,4 +1,5 @@
 ﻿using Database.Classes;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,9 @@ namespace Database
 
         protected static IMongoCollection<User> usersCollection =
             db.GetCollection<User>("users");
+
+        protected static IMongoCollection<Relays> relays =
+    db.GetCollection<Relays>("currentActiveRelay");
 
     }
 }

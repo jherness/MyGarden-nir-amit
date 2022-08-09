@@ -37,6 +37,11 @@ namespace Server
             return DBService.InsertNewSample(newSample);
         }
 
+        public static object ActivateRelay(Relays rl)
+        {
+            return DBService.ActivateRelay(rl);
+        }
+
         public static Task<ExceptionCounter> GetMostCommenException()
         {
             return DBService.GetMostCommenActivationReasonAsync();
